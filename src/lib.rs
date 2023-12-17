@@ -20,12 +20,12 @@ pub fn prendlebus() -> Result<(), Box<dyn std::error::Error>> {
     let actions = MessageItemArray::new(vec![],"as".into()).unwrap();
     let hints = MessageItemArray::new(vec![],"a{sv}".into()).unwrap();
     let timingout = 5000;
-    /* To not forget what does it mean
+    /* To not forget what it means
     m = Message::append3(m,"AppName",notificationlevel,"icon")
         .append3("summary", "body", actions)
         .append2(hints, timingout);
     */
-    m = Message::append3(m,"AppName",notificationlevel,"/usr/share/icons/ubuntu-mono-dark/status/24/unity-battery-020.svg")
+    m = Message::append3(m,"bll",notificationlevel,"/usr/share/icons/ubuntu-mono-dark/status/24/unity-battery-020.svg")
         .append3("BATTERY", "Your Battery is running low !!", actions)
         .append2(hints, timingout);
         // Send the message to the bus and handle the possible errors
